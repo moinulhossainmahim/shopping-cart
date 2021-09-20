@@ -5,7 +5,6 @@ import Navbar from './components/Navbar'
 import CartContainer from './components/CartContainer'
 import cartItems from './cart-items'
 import reducer from './reducer'
-import { DECREASE, INCREASE } from './actions'
 
 const initialState = {
 	cart: cartItems,
@@ -14,8 +13,6 @@ const initialState = {
 }
 
 const store = createStore(reducer, initialState)
-store.dispatch({ type: DECREASE })
-store.dispatch({ type: INCREASE })
 
 function App() {
 	return (
